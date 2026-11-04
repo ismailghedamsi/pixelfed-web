@@ -1,4 +1,8 @@
-:root { color-scheme: dark; --bg:#111418; --panel:#1a1f26; --line:#2b323c; --text:#e8ecf1; --muted:#97a1ad; --accent:#e1306c; }
+:root { color-scheme: dark; --bg:#111418; --panel:#1a1f26; --line:#2b323c; --text:#e8ecf1; --muted:#97a1ad; --accent:#e1306c; --field:#0d1013; --btn:#232a33; }
+:root[data-theme="light"] { color-scheme: light; --bg:#f4f5f7; --panel:#ffffff; --line:#d8dde3; --text:#16181d; --muted:#5d6874; --field:#ffffff; --btn:#eef1f4; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) { color-scheme: light; --bg:#f4f5f7; --panel:#ffffff; --line:#d8dde3; --text:#16181d; --muted:#5d6874; --field:#ffffff; --btn:#eef1f4; }
+}
 * { box-sizing: border-box; }
 body { margin:0; background:var(--bg); color:var(--text); font-family: system-ui, "Segoe UI", sans-serif; }
 a { color: var(--text); }
@@ -22,17 +26,17 @@ h1 { font-size:24px; margin:0 0 6px; }
 .card .sub { color:var(--muted); font-size:13px; }
 .card .caption { margin-top:6px; font-size:14px; white-space:pre-wrap; word-break:break-word; }
 .card .actions { display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
-button, .btn { background:#232a33; color:var(--text); border:1px solid var(--line); border-radius:8px; padding:7px 12px; cursor:pointer; font-size:14px; text-decoration:none; display:inline-block; }
+button, .btn { background:var(--btn); color:var(--text); border:1px solid var(--line); border-radius:8px; padding:7px 12px; cursor:pointer; font-size:14px; text-decoration:none; display:inline-block; }
 button:hover, .btn:hover { border-color:var(--muted); }
 button.primary, .btn.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
 button:disabled { opacity:.5; cursor:default; }
-input[type="text"], input[type="url"], input[type="password"], textarea, select { background:#0d1013; color:var(--text); border:1px solid var(--line); border-radius:8px; padding:9px 11px; font-size:15px; width:100%; }
+input[type="text"], input[type="url"], input[type="password"], textarea, select { background:var(--field); color:var(--text); border:1px solid var(--line); border-radius:8px; padding:9px 11px; font-size:15px; width:100%; }
 textarea { min-height:110px; }
 .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
 .row > * { flex:0 0 auto; }
 .grow { flex:1 1 220px; }
 .suggestions { border:1px solid var(--line); border-radius:10px; overflow:hidden; margin-top:6px; max-width:560px; }
-.suggestions .head { padding:7px 12px; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; background:#161b21; }
+.suggestions .head { padding:7px 12px; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; background:var(--panel); }
 .suggestions button.item { display:block; width:100%; text-align:left; background:var(--panel); border:none; border-bottom:1px solid var(--line); border-radius:0; padding:9px 12px; }
 .suggestions button.item:last-child { border-bottom:none; }
 .chips { display:flex; gap:8px; flex-wrap:wrap; margin:10px 0; }
@@ -45,3 +49,15 @@ textarea { min-height:110px; }
 .carousel { display:flex; gap:6px; padding:6px; overflow-x:auto; }
 .carousel img { width:52px; height:52px; object-fit:cover; border-radius:6px; opacity:.55; cursor:pointer; }
 .carousel img.sel { opacity:1; outline:2px solid var(--accent); }
+
+.postlist { display:grid; gap:14px; max-width:720px; }
+.postlist .card img.main { aspect-ratio:auto; max-height:640px; }
+.viewer { position:fixed; inset:0; background:rgba(0,0,0,.88); z-index:60; display:flex; align-items:center; justify-content:center; padding:20px; }
+.viewer-box { max-width:980px; width:100%; max-height:94vh; overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:14px; }
+.viewer-box > img { width:100%; max-height:72vh; object-fit:contain; background:#000; display:block; }
+.viewer-meta { padding:14px 16px; display:grid; gap:10px; }
+.viewer-meta .author { font-weight:600; }
+.viewer-meta .caption { white-space:pre-wrap; word-break:break-word; font-size:15px; }
+.toolbar { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin:12px 0; }
+.toolbar select { width:auto; }
+.toolbar .spacer { flex:1; }
