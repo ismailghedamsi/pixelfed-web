@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "PixelfedClient.WebWasm",
   "resources": {
-    "hash": "sha256-pGGNEJn3nlO2bo49Ba+JSAtBAfK91ng9Y7qFTIWBizE=",
+    "hash": "sha256-2S3RQPbdAH0J8vZIvNz4LktxoLQg1BM0MxvjJJrrw1E=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.2c598x8nrr.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.lt4h1t25j7.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -38,7 +38,7 @@
       "System.Text.RegularExpressions.glr0gomi5x.wasm": "System.Text.RegularExpressions.wasm",
       "System.Threading.pbq77pe2hp.wasm": "System.Threading.wasm",
       "System.Private.CoreLib.jb3mjlh0vu.wasm": "System.Private.CoreLib.wasm",
-      "PixelfedClient.WebWasm.lh8nqv9pyi.wasm": "PixelfedClient.WebWasm.wasm",
+      "PixelfedClient.WebWasm.48maa7qc4q.wasm": "PixelfedClient.WebWasm.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.fd55pqaqpk.js": "dotnet.native.js",
       "dotnet.native.vww2n0y4ua.wasm": "dotnet.native.wasm",
@@ -99,7 +99,7 @@
       "System.Text.Json.utvp388995.wasm": "sha256-ns/VOFnW1j60GP/SIilXcU6MhqjwSCbISE6tOBbqGaI=",
       "System.Text.RegularExpressions.glr0gomi5x.wasm": "sha256-tNseAgR7nskdiGElkl+zdHQezt2jwCfAqRW5jc1AvSM=",
       "System.Threading.pbq77pe2hp.wasm": "sha256-BUwXWCXRk0QslgtrbbBIlXL1zgfHpnfH21Mb60oLeqU=",
-      "PixelfedClient.WebWasm.lh8nqv9pyi.wasm": "sha256-uZC6dWPKmWVVn8ORphnsHX/Ilv5gJRZhUsjDfID7BIU="
+      "PixelfedClient.WebWasm.48maa7qc4q.wasm": "sha256-BPXQ91Y39wdUuNyhAgyIRMYGkCwbqeFcKmPC3CedzU0="
     }
   },
   "cacheBootResources": true,
